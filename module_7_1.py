@@ -1,8 +1,6 @@
-from pprint import pprint
-
-
 class Shop:
-    __file_name = 'products.txt'
+    def __init__(self):
+        self.__file_name = 'products.txt'
 
     def get_products(self):
         file = open(self.__file_name, 'r')
@@ -19,6 +17,7 @@ class Shop:
             else:
                 file.write(str(i) + '\n')
                 current_products += str(i) + '\n'
+        file.close()
 
 
 class Product:
