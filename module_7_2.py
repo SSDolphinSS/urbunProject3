@@ -5,7 +5,6 @@ def custom_write(file_name, strings):
     strings_positions = {}
     f = open(file_name, 'a+', encoding='utf-8')
     for line in strings:
-
         f.write(line, end='\n')
     # f.(strings, end='\n')
     # f.si()
@@ -24,3 +23,4 @@ info = [
 result = custom_write('test.txt', info)
 for elem in result.items():
     print(elem)
+
