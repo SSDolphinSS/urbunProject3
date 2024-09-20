@@ -5,8 +5,9 @@ class Figure:
     sides_count = 0
 
     def __init__(self, color, *sides):
-        self.__sides = sides if len(sides) == self.sides_count else [sides[0]] * self.sides_count
-        self.__color = color
+        self.__sides = sides if len(sides) == self.sides_count \
+            else [sides[0]] * self.sides_count
+        self.__color = list(color)
         self.filled = False
 
     def get_color(self):
@@ -68,10 +69,10 @@ class Cube(Figure):
         return self.__sides[0] ** 3
 
 
-circle1 = Circle((200, 200, 100), 10)
+circle1 = Circle((-200, 200, 100), 10)
 
 cube1 = Cube((222, 35, 130), 6)
-circle1.set_color(55, 66, 77)
+# circle1.set_color(55, 66, 77)
 print(circle1.get_color())
 cube1.set_color(300, 70, 15)
 print(cube1.get_color())
